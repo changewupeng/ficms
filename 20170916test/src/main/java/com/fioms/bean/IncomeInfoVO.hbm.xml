@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.fioms.bean.IncomeInfoVO" table="income_info" schema="" catalog="">
+        <id name="lsh">
+            <column name="lsh" sql-type="varchar" length="32" not-null="true"/>
+        </id>
+        <property name="accountId">
+            <column name="account_id" sql-type="varchar" length="32"/>
+        </property>
+        <property name="incomeCategory">
+            <column name="income_category" sql-type="varchar" length="32"/>
+        </property>
+        <property name="money">
+            <column name="money" sql-type="double" precision="22"/>
+        </property>
+        <property name="incomeDate">
+            <column name="income_date" sql-type="date"/>
+        </property>
+        <property name="registerDate">
+            <column name="registerDate" sql-type="timestamp" not-null="true"/>
+        </property>
+        <property name="remark">
+            <column name="remark" sql-type="varchar" length="256"/>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.fioms.bean.BusinessCardInfoVO" table="business_card_info" schema="" catalog="ficms">
+        <id name="cardId">
+            <column name="CARD_ID" sql-type="varchar" length="32" not-null="true"/>
+        </id>
+        <property name="name">
+            <column name="NAME" sql-type="varchar" length="32"/>
+        </property>
+        <property name="position">
+            <column name="POSITION" sql-type="varchar" length="128"/>
+        </property>
+        <property name="company">
+            <column name="COMPANY" sql-type="varchar" length="256"/>
+        </property>
+        <property name="address">
+            <column name="ADDRESS" sql-type="varchar" length="8"/>
+        </property>
+        <property name="postCode">
+            <column name="POST_CODE" sql-type="varchar" length="32"/>
+        </property>
+        <property name="phoneNum">
+            <column name="PHONE_NUM" sql-type="varchar" length="16"/>
+        </property>
+        <property name="fax">
+            <column name="FAX" sql-type="varchar" length="32"/>
+        </property>
+        <property name="cellphoneNum">
+            <column name="CELLPHONE_NUM" sql-type="varchar" length="16"/>
+        </property>
+        <property name="web">
+            <column name="WEB" sql-type="varchar" length="32"/>
+        </property>
+        <property name="email">
+            <column name="EMAIL" sql-type="varchar" length="32"/>
+        </property>
+    </class>
+</hibernate-mapping>

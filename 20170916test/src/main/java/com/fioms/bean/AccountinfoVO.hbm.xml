@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.fioms.bean.AccountinfoVO" table="accountinfo" discriminator-value = "0" schema="" catalog="">
+        <id name="accountId">
+            <column name="account_Id" sql-type="varchar" length="32" not-null="true"/>
+        </id>
+        <property name="account">
+            <column name="account" sql-type="varchar" length="32"/>
+        </property>
+        <property name="passWord">
+            <column name="passWord" sql-type="varchar" length="16"/>
+        </property>
+        <property name="accountStatus">
+            <column name="accountStatus" sql-type="varchar" length="1"/>
+        </property>
+        <property name="createDate">
+            <column name="createDate" sql-type="timestamp" not-null="true"/>
+        </property>
+        <property name="modifyDate">
+            <column name="modifyDate" sql-type="timestamp" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

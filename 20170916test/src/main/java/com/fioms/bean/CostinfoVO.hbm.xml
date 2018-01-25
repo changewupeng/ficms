@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.fioms.bean.CostinfoVO" table="costinfo" schema="" catalog="">
+        <id name="costid">
+            <column name="costid" sql-type="varchar" length="32" not-null="true"/>
+        </id>
+        <property name="accountId">
+            <column name="account_id" sql-type="varchar" length="32"/>
+        </property>
+        <property name="costCategoryCode">
+            <column name="cost_category_code" sql-type="varchar" length="16"/>
+        </property>
+        <property name="costSpecificCode">
+            <column name="cost_specific_code" sql-type="varchar" length="16"/>
+        </property>
+        <property name="money">
+            <column name="money" sql-type="double" precision="22"/>
+        </property>
+        <property name="costDate">
+            <column name="costDate" sql-type="date"/>
+        </property>
+        <property name="registerDate">
+            <column name="registerDate" sql-type="timestamp" not-null="true"/>
+        </property>
+        <property name="costStatus">
+            <column name="costStatus" sql-type="varchar" length="2"/>
+        </property>
+        <property name="remark">
+            <column name="remark" sql-type="varchar" length="256"/>
+        </property>
+    </class>
+</hibernate-mapping>

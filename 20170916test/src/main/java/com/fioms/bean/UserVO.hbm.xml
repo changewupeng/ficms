@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.fioms.bean.UserVO" table="user" schema="" catalog="">
+        <cache usage="read-write"></cache>
+        <id name="accountId">
+            <column name="account_Id" sql-type="varchar" length="32"/>
+            <generator class="uuid"></generator>
+        </id>
+        <property name="userName">
+            <column name="userName" sql-type="varchar" length="64"/>
+        </property>
+        <property name="phone">
+            <column name="phone" sql-type="varchar" length="11"/>
+        </property>
+        <property name="sex">
+            <column name="sex" sql-type="varchar" length="1"/>
+        </property>
+        <property name="nation">
+            <column name="nation" sql-type="varchar" length="64"/>
+        </property>
+        <property name="createDate">
+            <column name="createDate" sql-type="timestamp" not-null="true"/>
+        </property>
+        <property name="modifyDate">
+            <column name="modifyDate" sql-type="timestamp" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

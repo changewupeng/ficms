@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="com.fioms.bean.SysDmbmDicVO" table="sys_dmbm_dic" schema="" catalog="">
+        <cache usage="read-write"></cache>
+        <id name="dmbmbs">
+            <column name="dmbmbs" sql-type="int" not-null="true"/>
+        </id>
+        <property name="dmbm">
+            <column name="dmbm" sql-type="varchar" length="32"/>
+        </property>
+        <property name="dmbmmc">
+            <column name="dmbmmc" sql-type="varchar" length="32"/>
+        </property>
+        <property name="parentId">
+            <column name="parent_id" sql-type="varchar" length="32"/>
+        </property>
+        <property name="category">
+            <column name="category" sql-type="varchar" length="32"/>
+        </property>
+        <property name="createDate">
+            <column name="createDate" sql-type="timestamp" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>
